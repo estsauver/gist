@@ -466,10 +466,6 @@ Could not find copy command, tried:
   end
 
   def should_be_public?(options={})
-    if options.key? :private
-      !options[:private]
-    else
-      !Gist.legacy_private_gister?
-    end
+    false
   end
 end
